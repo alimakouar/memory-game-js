@@ -15,27 +15,51 @@
 </head>
 
 <body>
-<header class="text-center text-white masthead">
+    <header class="text-center text-white masthead">
         <div class="masthead-content">
             <div class="container" style="margin-top: -100px;">
                 <h2 class="masthead-subheading mb-0">Memory Game</h2>
             </div>
-            <select name="difficulty" id="difficulty" >
+            <select name="difficulty" id="difficulty" onchange="Difficultee()">
                 <option value="easy" >Easy</option>
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
-            </select>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
-    </div>
-</header>
-<footer class="py-5 bg-black">
-    <div class="container">
-        <p class="text-center text-white m-0 small">Copyright&nbsp;© Memory game by ALI MAKOUAR 2021</p>
-    </div>
-</footer>
+              </select>
+              <button id="hint" style="display:inline;" onclick="giveHint();">Hint</button>
+              <button id="start" syle="display:inline;" onclick="play();disabled='true';">Start</button>
+              <div id="countdown">You have 4 seconds to memorize the pictures</div> 
+              <div class="jeu" id="jeu">
+                  <div class="case" onclick="flipImage(0);"><img id="img1" src="pics/p1.jpg" ></div>
+                  <div class="case" onclick="flipImage(1);" ><img id="img2" src="pics/p1.jpg" ></div>
+                  <div class="case" onclick="flipImage(2);"><img id="img3" src="pics/p2.jpg"></div>
+                  <div class="case" onclick="flipImage(3);"><img id="img4" src="pics/p2.jpg"></div>
+                  <div class="case" onclick="flipImage(4);"><img id="img5" src="pics/p3.jpg"></div>
+                  <div class="case" onclick="flipImage(5);"><img id="img6" src="pics/p3.jpg"></div>
+                  <div class="case" onclick="flipImage(6);"><img id="img7" src="pics/p4.jpg"></div>
+                  <div class="case" onclick="flipImage(7);"><img id="img8" src="pics/p4.jpg"></div>
+                  <div class="case" onclick="flipImage(8);"><img id="img9" src="pics/p5.jpg"></div>
+                  <div class="case" onclick="flipImage(9);"><img id="img10" src="pics/p5.jpg"></div>
+                  <div class="case" onclick="flipImage(10);"><img id="img11" src="pics/p6.jpg"></div>
+                  <div class="case" onclick="flipImage(11);"><img id="img12" src="pics/p6.jpg"></div>
+                  <div class="case" onclick="flipImage(12);"><img id="img13" src="pics/p7.jpg"></div>
+                  <div class="case" onclick="flipImage(13);"><img id="img14" src="pics/p7.jpg"></div>
+                  <div class="case" onclick="flipImage(14);"><img id="img15" src="pics/p8.jpg"></div>
+                  <div class="case" onclick="flipImage(15);"><img id="img16" src="pics/p8.jpg"></div>
+                  <hr/>
+              </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© Memory game by ALI MAKOUAR 2021</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+<script src="script.js"></script>
